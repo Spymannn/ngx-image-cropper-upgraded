@@ -10,7 +10,7 @@
 Add the ImageCropperModule to the imports of the module which will be using the Image Cropper.
 ```
 import { NgModule } from '@angular/core';
-import { ImageCropperModule } from 'ngx-image-cropper';
+import { ImageCropperModule } from 'ngx-image-cropper-upgraded';
 
 @NgModule({
     imports: [
@@ -51,7 +51,7 @@ Add the element to your HTML:
 
 And add this to your ts file:
 ```
-import { ImageCroppedEvent } from 'ngx-image-cropper';
+import { ImageCroppedEvent } from 'ngx-image-cropper-upgraded';
 
 export class YourComponent {
     imageChangedEvent: any = '';
