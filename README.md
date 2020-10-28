@@ -4,10 +4,7 @@
 [StackBlitz](https://stackblitz.com/edit/image-cropper)
 
 ### Installation
-`npm install ngx-image-cropper --save`
-
-### Upgrade instructions
-For a list of breaking changes and update instructions, go to [releases](https://github.com/Mawi137/ngx-image-cropper/releases).
+`npm install ngx-image-cropper-upgraded --save`
 
 ### Example usage
 Add the ImageCropperModule to the imports of the module which will be using the Image Cropper.
