@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "copy:files": "cp ./README.md ./dist/ngx-image-cropper && cp ./LICENSE ./dist/ngx-image-cropper"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~8.2.8",
     "@angular/common": "~8.2.8",
