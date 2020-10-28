@@ -3,33 +3,33 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-image-cropper": {
+    "ngx-image-cropper-upgraded": {
       "projectType": "library",
-      "root": "projects/ngx-image-cropper",
-      "sourceRoot": "projects/ngx-image-cropper/src",
+      "root": "projects/ngx-image-cropper-upgraded",
+      "sourceRoot": "projects/ngx-image-cropper-upgraded/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ngx-image-cropper/tsconfig.lib.json",
-            "project": "projects/ngx-image-cropper/ng-package.json"
+            "tsConfig": "projects/ngx-image-cropper-upgraded/tsconfig.lib.json",
+            "project": "projects/ngx-image-cropper-upgraded/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-image-cropper/src/test.ts",
-            "tsConfig": "projects/ngx-image-cropper/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-image-cropper/karma.conf.js"
+            "main": "projects/ngx-image-cropper-upgraded/src/test.ts",
+            "tsConfig": "projects/ngx-image-cropper-upgraded/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-image-cropper-upgraded/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-image-cropper/tsconfig.lib.json",
-              "projects/ngx-image-cropper/tsconfig.spec.json"
+              "projects/ngx-image-cropper-upgraded/tsconfig.lib.json",
+              "projects/ngx-image-cropper-upgraded/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
