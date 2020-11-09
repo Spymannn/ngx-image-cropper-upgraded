@@ -692,46 +692,46 @@ export class ImageCropperComponent implements OnChanges, OnInit {
     }
 
     private resize(event: any): void {
-        let diffX = this.getClientX(event) - this.moveStart.clientX;
-        let diffY = this.getClientY(event) - this.moveStart.clientY;
+        var diffX = this.getClientX(event) - this.moveStart.clientX;
+        var diffY = this.getClientY(event) - this.moveStart.clientY;
         switch (this.moveStart.position) {
             case 'left':
                 this.cropper.x1 = Math.min(Math.max(this.moveStart.x1 + diffX, this.cropper.x2 - this.cropperScaledMaxWidth), 
-                this.cropper.x2 - this.cropperScaledMinWidth);                
+                    this.cropper.x2 - this.cropperScaledMinWidth);
                 break;
             case 'topleft':
                 this.cropper.x1 = Math.min(Math.max(this.moveStart.x1 + diffX, this.cropper.x2 - this.cropperScaledMaxWidth),
-                this.cropper.y1 = Math.min(this.moveStart.y1 + diffY, this.cropper.y2 - this.cropperScaledMinHeight);	                    this.cropper.x2 - this.cropperScaledMinWidth);
+                    this.cropper.x2 - this.cropperScaledMinWidth);
                 this.cropper.y1 = Math.min(Math.max(this.moveStart.y1 + diffY, this.cropper.y2 - this.cropperScaledMaxHeight), 
                     this.cropper.y2 - this.cropperScaledMinHeight);
                 break;
             case 'top':
                 this.cropper.y1 = Math.min(Math.max(this.moveStart.y1 + diffY, this.cropper.y2 - this.cropperScaledMaxHeight), 
-                this.cropper.y2 - this.cropperScaledMinHeight);                
+                    this.cropper.y2 - this.cropperScaledMinHeight);
                 break;
             case 'topright':
                 this.cropper.x2 = Math.max(Math.min(this.moveStart.x2 + diffX, this.cropper.x1 + this.cropperScaledMaxWidth),
-                this.cropper.y1 = Math.min(this.moveStart.y1 + diffY, this.cropper.y2 - this.cropperScaledMinHeight);	                    this.cropper.x1 + this.cropperScaledMinWidth);
+                    this.cropper.x1 + this.cropperScaledMinWidth);
                 this.cropper.y1 = Math.min(Math.max(this.moveStart.y1 + diffY, this.cropper.y2 - this.cropperScaledMaxHeight), 
                     this.cropper.y2 - this.cropperScaledMinHeight);
                 break;
             case 'right':
                 this.cropper.x2 = Math.max(Math.min(this.moveStart.x2 + diffX, this.cropper.x1 + this.cropperScaledMaxWidth),
-                this.cropper.x1 + this.cropperScaledMinWidth);                
+                    this.cropper.x1 + this.cropperScaledMinWidth);
                 break;
             case 'bottomright':
                 this.cropper.x2 = Math.max(Math.min(this.moveStart.x2 + diffX, this.cropper.x1 + this.cropperScaledMaxWidth),
-                this.cropper.y2 = Math.max(this.moveStart.y2 + diffY, this.cropper.y1 + this.cropperScaledMinHeight);	                    this.cropper.x1 + this.cropperScaledMinWidth);
+                    this.cropper.x1 + this.cropperScaledMinWidth);
                 this.cropper.y2 = Math.max(Math.min(this.moveStart.y2 + diffY,  this.cropper.y1 + this.cropperScaledMaxHeight),
                     this.cropper.y1 + this.cropperScaledMinHeight);
                 break;
             case 'bottom':
                 this.cropper.y2 = Math.max(Math.min(this.moveStart.y2 + diffY,  this.cropper.y1 + this.cropperScaledMaxHeight),
-                this.cropper.y1 + this.cropperScaledMinHeight);                
+                    this.cropper.y1 + this.cropperScaledMinHeight);
                 break;
             case 'bottomleft':
                 this.cropper.x1 =   Math.min(Math.max(this.moveStart.x1 + diffX, this.cropper.x2 - this.cropperScaledMaxWidth),
-                this.cropper.y2 = Math.max(this.moveStart.y2 + diffY, this.cropper.y1 + this.cropperScaledMinHeight);	                    this.cropper.x2 - this.cropperScaledMinWidth);
+                    this.cropper.x2 - this.cropperScaledMinWidth);
                 this.cropper.y2 = Math.max(Math.min(this.moveStart.y2 + diffY,  this.cropper.y1 + this.cropperScaledMaxHeight),
                     this.cropper.y1 + this.cropperScaledMinHeight);
                 break;
@@ -742,9 +742,9 @@ export class ImageCropperComponent implements OnChanges, OnInit {
                 const x1 = this.cropper.x1;
                 const y1 = this.cropper.y1;
                 this.cropper.x1 = Math.min(Math.max(this.moveStart.clientX - (newWidth / 2), this.cropper.x2 - this.cropperScaledMaxWidth/2),
-                this.cropper.y1 = Math.min(this.moveStart.clientY - (newHeight / 2), this.cropper.y2 - this.cropperScaledMinHeight);	                    this.cropper.x2 - this.cropperScaledMinWidth);
-                this.cropper.x2 = Math.max(this.moveStart.clientX + (newWidth / 2), x1 + this.cropperScaledMinWidth);	                this.cropper.y1 = Math.min(Math.max(this.moveStart.clientY - (newHeight / 2), this.cropper.y2 - this.cropperScaledMaxHeight/2),
-                this.cropper.y2 = Math.max(this.moveStart.clientY + (newHeight / 2), y1 + this.cropperScaledMinHeight);	                    this.cropper.y2 - this.cropperScaledMinHeight);
+                    this.cropper.x2 - this.cropperScaledMinWidth);
+                this.cropper.y1 = Math.min(Math.max(this.moveStart.clientY - (newHeight / 2), this.cropper.y2 - this.cropperScaledMaxHeight/2),
+                    this.cropper.y2 - this.cropperScaledMinHeight);
                 this.cropper.x2 = Math.max(Math.min(this.moveStart.clientX + (newWidth / 2), x1 + this.cropperScaledMaxWidth/2),  
                     x1 + this.cropperScaledMinWidth);
                 this.cropper.y2 = Math.max(Math.min(this.moveStart.clientY + (newHeight / 2), y1 + this.cropperScaledMaxHeight/2), 
@@ -845,6 +845,7 @@ export class ImageCropperComponent implements OnChanges, OnInit {
         if (this.sourceImage && this.sourceImage.nativeElement && this.transformedImage != null) {
             this.startCropImage.emit();
             const imagePosition = this.getImagePosition();
+
             const imgWidth = imagePosition.x2 - imagePosition.x1;
             const imgHeight = imagePosition.y2 - imagePosition.y1;
             const sourceImageElement = this.sourceImage.nativeElement;
