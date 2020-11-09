@@ -1,16 +1,16 @@
 {
     "name": "ngx-image-cropper-upgraded",
     "version": "0.0.4",
-    "description": "An image cropper for Angular",
+    "description": "An image cropper for Angular upgraded by Spymannn",
     "author": "Martijn Willekens",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Mawi137/ngx-image-cropper.git"
+        "url": "https://github.com/Spymannn/ngx-image-cropper-upgraded"
     },
     "bugs": {
         "url": "https://github.com/Mawi137/ngx-image-cropper/issues"
     },
-    "homepage": "https://github.com/Mawi137/ngx-image-cropper",
+    "homepage": "https://github.com/Spymannn/ngx-image-cropper-upgraded",
     "keywords": [
         "angular",
         "angular 6",
